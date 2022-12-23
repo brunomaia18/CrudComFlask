@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<table class="table" id="tabela">
+     <caption></caption>
+     <tbody>
+     <tr>
+         <th>
+             <i>
+                 Cliente
+             </i>
+         </th>
+         <th>
+             <i>
+                 Telefone
+             </i>
+         </th>
+     </tr>
+      <tr> 
+          <td id="id1"> <a href="">Nome 1</a></td>
+          <td> telefone</td>
+      </tr>
+      <tr> 
+          <td id="id2"> <a href="">Nome 2</a></td>
+          <td> telefone</td>
+      </tr>
+      <tr> 
+          <td id="id3" name=""> Casou foi <button href="">valor</button></td>
+          <td> telefone</td>
+      </tr>
+     </tbody>
+ </table>
+  <script>
+    $(document).on("click","#tabela tr",function(e){
+      e.preventDefault();
+      var id_cliente = $(this).parent().attr("id");
+      $("#tabela tr").text($(this).text());
+      console.log(id_cliente); // apenas para verificar o valor
+   })
+   </script>
+</body>
+</html>

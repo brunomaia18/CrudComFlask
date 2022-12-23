@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <form  class="row gy-2 gx-3 align-items-center" id="form" >
+        
+        <div class="col-md-4">
+            <label class="form-label">Venda</label>
+            <input type="text" name="vendedor" placeholder="Digite o nome de quem recebeu o pedido" id="vendedor" value="{{usuario[1]}}" class="form-control">
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">Cliente</label>
+            <input type="text" id='cliente' name="cliente" value="{{usuario[2]}}" placeholder="Digite o nome do cliente aqui" id="cliente" class="form-control">
+        </div>
+
+        <div class="col-md-2">
+            <label class="form-label">Telefone</label>
+            <input type="tel"   name="telefone" placeholder="Digite o telefone do cliente" value="{{usuario[3]}}" id="telefone" class="form-control" onkeyup="handlePhone(event)">
+        </div>
+
+        <div class="col-md-2 col-auto">
+            <label for="Cidade" class="form-label">Cidade</label>
+            <input type="text" class="form-control" id="cidade" value="{{usuario[4]}}" name="cidade" placeholder="Digite a cidade">
+        </div>
+
+        <div class="col-md-4 col-auto">
+            <label for="bairro" class="form-label">Bairro</label>
+            <input type="text" class="form-control" id="bairro" value="{{usuario[5]}}" name="bairro" placeholder="Digite o bairro">
+        </div>
+        <div class="col-md-6 col-auto">
+            <label for="endereco" class="form-label">Endereco</label>
+            <input type="text" class="form-control" id="endereco" value="{{usuario[6]}}" name="endereco" placeholder="Digite a rua e numero">
+        </div>
+
+        <div class="col-md-6 col-auto ">
+            <select name="meio" id="meio" value="{{usuario[7]}}"  class="form-select">
+                <option selected>Por onde achou a loja</option>
+                <option name="meio" value="Instagram">Instagram</option>
+                <option name="meio" value="Facebook">Facebook</option>
+                <option name="meio" value="Google">Google</option>
+                <option name="meio" value="Ifood">Ifood</option>
+                <option name="meio" value="Indicacao">Indicacao</option>
+                <option name="meio" value="Outros">Outro</option>
+            </select>
+        </div>
+        <div class="col-md-6 col-auto">
+            <label for="codigo" class="form-label">codigo</label>
+            <input type="text" class="form-control" id="codigo" value="{{usuario[8]}}" name="codigo" placeholder="Digite a rua e numero">
+        </div>
+        <div class="col-md-2 col-auto">
+            <label for="quantidade" class="form-label">Quantidade</label>
+            <input type="number" class="form-control" id="quantidade" value="{{usuario[9]}}" name="quantidade" placeholder="Quantidade do produto">
+        </div>
+        <div class="col-md-2 col-auto">
+            <label for="venda" class="form-label">Dia da venda</label>
+            <input type="date" class="form-control" value="{{usuario[10]}}" id="venda" name="venda">
+        </div>
+
+        <div class="col-md-2 col-auto">
+            <label for="Entrega" class="form-label">Dia da Entrega</label>
+            <input type="date" class="form-control" value="{{usuario[11]}}" id="entrega" name="entrega">
+        </div>
+        <div class="col-auto">
+            <label class="visually-hidden" for="autoSizingInputGroup">Valor a ser pago</label>
+            <div class="input-group">
+                <div class="input-group-text">R$</div>
+                    <input type="number" class="form-control" value="{{usuario[12]}}" id="valor" name="valor" placeholder="Digite o valor a pagar"  min="0" max="100" step=".01">
+                </div>
+         </div>
+
+         <div class="col-md-6 col-auto ">
+            <select name="pagamento" value="{{usuario[13]}}" id="pagamento" class="form-select">
+                <option selected>Forma de Pagamento</option>
+                <option name="pagamento"value="Ifood">Ifood</option>
+                <option name="pagamento"value="A vista">A vista</option>
+                <option name="pagamento"value="Pix">Pix</option>
+                <option name="pagamento" value="Debito">Debito</option>
+                <option name="pagamento" value="Credito 1x">Credito 1x</option>
+                <option name="pagamento" value="Credito 2x">Credito 2x</option>
+            </select>
+        </div>
+
+        <br>
+
+        <div class="form-floating ">
+            <input class="form-control" id="obs" value="{{usuario[14]}}"  name='obs' placeholder="Digite" id="obs" style="height: 100px;">
+            <label for="obs">Observacao</label>
+        </div>
+
+          <br>
+
+        <div class="d-grid gap-2">
+        
+       <input type="submit" value="Update" id="enviar" name="enviar" class="btn btn-primary">
+        </div>
+      </form>
+    </div>
+</body>
+</html>
